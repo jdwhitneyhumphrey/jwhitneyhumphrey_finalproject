@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Flash : MonoBehaviour {
 
+	public float coolDown = 1;
+	public float coolDownTimer;
+
 	Light light;
 
 	// Use this for initialization
@@ -15,10 +18,21 @@ public class Flash : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		// Toggle light on/off when F key is pressed.
-		if (Input.GetKeyUp(KeyCode.F))
-		{
-			light.enabled = !light.enabled;
-		}
+		if (coolDownTimer > 0)
+        {
+			coolDownTimer -= Time.deltaTime;
+        }
+
+		if(coolDownTimer < 0)
+        {
+			coolDownTimer = 0;
+			light.enabled = false;
+        }
+
+		if(Input.GetKeyUp(KeyCode.F) && coolDownTimer == 0)
+        {
+			light.enabled = true;
+			coolDownTimer = coolDown;
+        }
 	}
 }
