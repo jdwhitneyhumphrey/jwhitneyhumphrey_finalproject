@@ -27,12 +27,14 @@ public class Flash : MonoBehaviour {
         {
 			coolDownTimer = 0;
 			light.enabled = false;
-        }
+			GameObject.FindGameObjectWithTag("Flash").SetActive(false);
+		}
 
 		if(Input.GetKeyUp(KeyCode.F) && coolDownTimer == 0)
         {
 			light.enabled = true;
 			coolDownTimer = coolDown;
+			GameObject.FindGameObjectWithTag("Flash").SetActive(true);
         }
 	}
 }

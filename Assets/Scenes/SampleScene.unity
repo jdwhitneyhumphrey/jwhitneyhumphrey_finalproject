@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &195866640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7311151373157674016, guid: 59a2366c74028a345aecfb0eb8e02fd6, type: 3}
+  m_PrefabInstance: {fileID: 7989767545756370462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &195866643
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195866640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &341395991
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 341395992}
+  - component: {fileID: 341395993}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -153,6 +173,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &341395993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341395991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c992532ee4fcb7b40880480d250f57e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 653562359}
+  player: {fileID: 354050936}
+  sample1: {fileID: 0}
+  sample2: {fileID: 0}
+  sample3: {fileID: 0}
+  sample4: {fileID: 0}
+  sample5: {fileID: 0}
+  sample6: {fileID: 0}
+--- !u!1 &354050936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+  m_PrefabInstance: {fileID: 799127854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &653562358
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +394,10 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_WalkSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225009144281003324, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Name
+      value: Flash
       objectReference: {fileID: 0}
     - target: {fileID: 8731956477482688155, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Range
@@ -620,7 +669,7 @@ GameObject:
   - component: {fileID: 1235910871}
   m_Layer: 0
   m_Name: Open Trench
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
