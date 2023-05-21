@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Flash : MonoBehaviour {
 
-	public float coolDown = 1;
+	public float coolDown = 2;
 	public float coolDownTimer;
 
 	Light light;
@@ -27,14 +27,12 @@ public class Flash : MonoBehaviour {
         {
 			coolDownTimer = 0;
 			light.enabled = false;
-			GameObject.FindGameObjectWithTag("Flash").SetActive(false);
 		}
 
 		if(Input.GetKeyUp(KeyCode.F) && coolDownTimer == 0)
         {
 			light.enabled = true;
 			coolDownTimer = coolDown;
-			GameObject.FindGameObjectWithTag("Flash").SetActive(true);
         }
 	}
 }

@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class CrushDepth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	//A reference to the game manager
+	public GameManager gameManager;
+	private FirstPersonController fpsController;
+	public GameObject player;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	// Triggers when the player enters the open trench
+	void OnTriggerEnter(Collider other)
+	{
+		fpsController = player.GetComponent<FirstPersonController>();
+		fpsController.enabled = false;
+	}
 }
