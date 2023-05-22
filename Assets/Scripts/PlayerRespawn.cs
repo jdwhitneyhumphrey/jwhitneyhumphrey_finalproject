@@ -7,7 +7,7 @@ public class PlayerRespawn : MonoBehaviour
 	public GameManager gameManager; 
 
 	// Triggers when the player enters the water
-	void Start
+	void OnTriggerEnter(Collider other)
 	{
 		// Moves the player to the spawn point
 		gameManager.PositionPlayer();
