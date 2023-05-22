@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (gameObject.tag == "Player")
 		{
+			IsGameOver = true;
 			Rect rect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 100, 120, 50);
 			GUI.Box(rect, "Game Over");
 			Rect rect2 = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 80, 90, 40);
