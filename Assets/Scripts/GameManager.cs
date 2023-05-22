@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
 	public Transform spawnPoint;
 	public GameObject player;
 	public Sample sample1, sample2, sample3, sample4, sample5, sample6;
-	bool IsGameOver = false;
 
 	// So that we can access the player's controller from this script
 	private FirstPersonController fpsController;

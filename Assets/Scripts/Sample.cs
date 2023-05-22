@@ -12,16 +12,8 @@ public class Sample : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
        fpsController = player.GetComponent<FirstPersonController>();
-        IsSolved = true;
-    }
-    void OnGUI()
-
-    {
-        if (IsSolved == true)
-        {
-            Rect rect = new Rect(Screen.width / 2 - 80, Screen.height / 2 - 100, 120, 50);
-            GUI.Box(rect, "Sample Collected");
-        }
+       IsSolved = true;
 
     }
+    
 }
