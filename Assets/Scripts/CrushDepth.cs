@@ -16,9 +16,17 @@ public class CrushDepth : MonoBehaviour
 		fpsController = player.GetComponent<FirstPersonController>();
 		fpsController.enabled = false;
 		IsGameOver = true;
-		Rect rect = new Rect(Screen.width / 2 - 60, Screen.height / 2 - 100, 120, 50);
-		GUI.Box(rect, "Game Over");
-		Rect rect2 = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 80, 90, 40);
-		GUI.Label(rect2, "You were crushed by the water pressure");
+	}
+	void OnGUI()
+
+	{
+	    if (IsGameOver == true)
+        {
+			Rect rect = new Rect(Screen.width / 2 - 80, Screen.height / 2 - 100, 120, 50);
+			GUI.Box(rect, "Game Over");
+			Rect rect2 = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 50, 100, 150);
+			GUI.Label(rect2, "You were crushed by the water pressure");
+		}
+		
 	}
 }
