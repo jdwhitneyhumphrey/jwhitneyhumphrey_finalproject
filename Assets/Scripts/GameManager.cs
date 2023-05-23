@@ -40,10 +40,5 @@ public class GameManager : MonoBehaviour
 		player.transform.position = spawnPoint.position;
 		player.transform.rotation = spawnPoint.rotation;
 	}
-
-	void Update()
-    {
-
-    }
 	
 }
