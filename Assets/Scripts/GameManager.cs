@@ -40,5 +40,12 @@ public class GameManager : MonoBehaviour
 		player.transform.position = spawnPoint.position;
 		player.transform.rotation = spawnPoint.rotation;
 	}
-	
+
+	void OnGUI()
+	{
+		Rect rect = new Rect(Screen.width / 2 - 80, Screen.height / 2 - 180, 180, 100);
+		GUI.Box(rect, "Controls");
+		Rect rect2 = new Rect(Screen.width / 2 - 55, Screen.height / 2 - 160, 200, 100);
+		GUI.Label(rect2, "WASD: Move  F: Flash Camera");
+	}
 }
